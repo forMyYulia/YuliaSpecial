@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="/src/style.css">
+      <title>To my love</title>
+      <style>
+          @keyframes colorChange {
+              0% {
+                  background-color: #EBADAE; /* Starting color */
+              }
+              25% {
+                  background-color: #F1CFD0; /* Color at 25% of animation */
+              }
+              50% {
+                  background-color: #F7C5C8; /* Color at 50% of animation */
+              }
+              75% {
+                  background-color: #F4B6B7; /* Color at 75% of animation */
+              }
+              100% {
+                  background-color: #F3CACE; /* Ending color */
+              }
+          }
+      </style>
+  </head>
+  <body style="height: 20000px; animation: colorChange 5s infinite ease-in-out alternate-reverse">
+<!--    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-yellow-800">-->
+<!--      <div id="" class="relative w-28 h-60 bg-amber-600 border-2 border-red-900"></div>-->
+<!--    </div>-->
+    <div id="box" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-60 transform-3d perspective-distant cursor-default" style="transform: scale(2);">
+
+        <p id="underText" class="absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-z-61 w-96 text-center text-xl font-bold text-[#d32f2f]" style="scale(1);">Люблю тебе, жопка моя)<br/>P.S. повертайся скоріше</p>
+        <div id="boxSubSideLeftUp" class="absolute inset-0 origin-left -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideLeftDown" class="absolute inset-0 origin-right -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideRightUp" class="absolute inset-0 origin-bottom -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideRightDown" class="absolute inset-0 origin-top -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideDownRight" class="absolute inset-0 origin-bottom -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideDownLeft" class="absolute inset-0 origin-top -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+
+        <div id="boxSubSideRight" class="absolute inset-0 origin-left -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideLeft" class="absolute inset-0 origin-right -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+        <div id="boxSubSideDown" class="absolute inset-0 origin-top -translate-z-61 translate-x-12 translate-y-12 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"></div>
+
+        <div id="boxSideTop" class="absolute inset-0 bg-[url('/texture.jpg')] bg-size-[260px] text-center text-3xl font-bold text-white border-2 border-red-900 flex justify-center translate-y-0 rotate-z-0 items-center p-5">Я хочу тобі дещо сказати...</div>
+        <div id="boxSideBottom" class="absolute inset-0 -translate-z-60 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-2xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900">
+            <div class="relative">
+                <p class="boxSideBottomText absolute top-0 left-0 w-52 -translate-x-1/2 -translate-y-1/2">ти - моє сонечко у ясному небі</p>
+                <p class="boxSideBottomText absolute top-0 left-0 w-52 -translate-x-1/2 -translate-y-1/2">з тобою я почуваюся найкращою версією себе</p>
+                <p class="boxSideBottomText absolute top-0 left-0 w-52 -translate-x-1/2 -translate-y-1/2">і навіть на відстані сотень кілометрів</p>
+                <p class="boxSideBottomText absolute top-0 left-0 w-52 -translate-x-1/2 -translate-y-1/2">я ціную кожен момент проведений з тобою</p>
+            </div>
+        </div>
+        <div id="boxSideRight" class="absolute inset-0 origin-left -translate-z-60 translate-x-60 rotate-y-90 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900">
+        </div>
+        <div id="boxSideLeft" class="absolute inset-0 origin-right -translate-z-60 -translate-x-60 -rotate-y-90 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900">4</div>
+        <div id="boxSideUp" class="absolute inset-0 origin-bottom -translate-z-60 -translate-y-60 rotate-x-90 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900"><p class="opacity-10">Цьом 🩷</p></div>
+        <div id="boxSideDown" class="absolute inset-0 origin-top -translate-z-60 translate-y-60 -rotate-x-90 bg-[url('/texture.jpg')]  bg-size-[260px] text-center text-4xl flex justify-center items-center p-5 font-bold text-white border-2 border-red-900">6</div>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
