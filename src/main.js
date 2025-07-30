@@ -26,10 +26,10 @@ const subSides = [
 
 for (let i = 0; i < sides.length+subSides.length; i++) {
     if (i < 4 && i !== 2)
-        sides[i].innerHTML = `<div class=\"relative\"><img src=\"./img${i+1}.jpg\" alt=\"<3\" class=\"max-h-52 max-w-52\"><img src=\"./corner.png\" class=\"absolute -top-2 -left-2 w-8 h-8\"><img src=\"/corner.png\" class=\"absolute -top-2 -right-2 w-8 h-8 -scale-x-100\"><img src=\"/corner.png\" class=\"absolute -bottom-2 -left-2 w-8 h-8 -scale-y-100\"><img src=\"/corner.png\" class=\"absolute -bottom-2 -right-2 w-8 h-8 -scale-x-100 -scale-y-100\"></div>`
+        sides[i].innerHTML = `<div class=\"relative\"><img src=\"./img${i+1}.jpg\" alt=\"<3\" class=\"max-h-52 max-w-52\"><img src=\"./corner.png\" class=\"absolute -top-2 -left-2 w-8 h-8\"><img src=\"./corner.png\" class=\"absolute -top-2 -right-2 w-8 h-8 -scale-x-100\"><img src=\"./corner.png\" class=\"absolute -bottom-2 -left-2 w-8 h-8 -scale-y-100\"><img src=\"./corner.png\" class=\"absolute -bottom-2 -right-2 w-8 h-8 -scale-x-100 -scale-y-100\"></div>`
     else if (i !== 2) {
         subSides[i - 4].classList.add("size-36");
-        subSides[i - 4].innerHTML = `<div class=\"relative\"><img src=\"./img${i + 1}.jpg\" alt=\"<3\" class=\"max-h-30 max-w-30\"><img src=\"./corner.png\" class=\"absolute -top-1 -left-1 w-4 h-4\"><img src=\"/corner.png\" class=\"absolute -top-1 -right-1 w-4 h-4 -scale-x-100\"><img src=\"/corner.png\" class=\"absolute -bottom-1 -left-1 w-4 h-4 -scale-y-100\"><img src=\"/corner.png\" class=\"absolute -bottom-1 -right-1 w-4 h-4 -scale-x-100 -scale-y-100\"></div>`;
+        subSides[i - 4].innerHTML = `<div class=\"relative\"><img src=\"./img${i + 1}.jpg\" alt=\"<3\" class=\"max-h-30 max-w-30\"><img src=\"./corner.png\" class=\"absolute -top-1 -left-1 w-4 h-4\"><img src=\"./corner.png\" class=\"absolute -top-1 -right-1 w-4 h-4 -scale-x-100\"><img src=\"./corner.png\" class=\"absolute -bottom-1 -left-1 w-4 h-4 -scale-y-100\"><img src=\"./corner.png\" class=\"absolute -bottom-1 -right-1 w-4 h-4 -scale-x-100 -scale-y-100\"></div>`;
     }
 }
 
