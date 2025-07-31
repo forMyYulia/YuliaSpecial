@@ -170,14 +170,14 @@ const handleScroll = () => {
         // Show text at the top of the heart
         const textProgress = Math.min((scrollY - textAppearStart) / 1000, 1);
         const textScale = (0.5 + (textProgress * 0.5)) * responsiveScale; // Scale from 0.5 to 1
-        const textTranslateY = -50 - (textProgress * 50); // Position at top of heart
+        const textTranslateY = -60 - (textProgress * 30); // Reduced movement - position at top of heart
         underText.style.opacity = textProgress;
         underText.style.transform = `scale(${textScale}) translateY(${textTranslateY}px)`;
     } else {
         // Transition period
         const transitionProgress = (scrollY - heartFormationComplete) / 500;
         underText.style.opacity = transitionProgress;
-        underText.style.transform = `scale(${(0.1 + transitionProgress * 0.4) * responsiveScale}) translateY(${-200 * transitionProgress}px)`;
+        underText.style.transform = `scale(${(0.1 + transitionProgress * 0.4) * responsiveScale}) translateY(${-50 * transitionProgress}px)`;
     }
     
     // Box scaling with responsive sizing
