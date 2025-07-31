@@ -24,12 +24,8 @@
               }
           }
           
-          .heart-container {
-              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          }
-          
           .box-side {
-              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              /* transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
               box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
           }
           
@@ -76,7 +72,7 @@
   <body style="height: 14000px; animation: colorChange 10s infinite ease-in-out alternate-reverse">
     <div id="box" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-24 transform-3d perspective-distant cursor-default heart-container" style="transform: scale(1.5);">
 
-        <p id="underText" class="absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-z-61 text-center font-bold romantic-text" style="scale: 0.1;">Люблю тебе, жопка моя)<br/>P.S. повертайся скоріше</p>
+        <p id="underText" class="absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-z-61 text-center font-bold romantic-text" style="transform: scale(0.1);">Люблю тебе, жопка моя)<br/>P.S. повертайся скоріше</p>
         
         <!-- Heart petals - smaller and more romantic -->
         <div id="boxSubSideLeftUp" class="absolute inset-0 origin-left -translate-z-61 translate-x-6 translate-y-6 bg-gradient-to-br from-pink-200 to-rose-300 box-side romantic-border size-12 text-center text-2xl flex justify-center items-center p-2 font-bold text-white"></div>

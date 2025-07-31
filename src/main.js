@@ -145,7 +145,7 @@ function updateTextSizes() {
 }
 
 // Optimized scroll handler with responsive heart sizing
-const handleScroll = throttle((e) => {
+const handleScroll = () => {
     const scrollY = window.scrollY;
     const maxScroll = 5000; // Reduced from 13000
     const progress = Math.min(scrollY / maxScroll, 1);
@@ -205,9 +205,9 @@ const handleScroll = throttle((e) => {
     }
     
     // Top side animation
-    const topOpacity = scrollY/2;
-    // const topRotate = scrollY/20;
-    top.style.opacity = `${100-Math.min(scrollY/10, 100)}%`;
+    const topTranslateY = scrollY/2;
+    const topRotate = scrollY/20;
+    top.style.transform = `translateY(-${topTranslateY}px) rotate(${topRotate}deg)`;
     
     // Main sides rotation with smoother easing
     for (let i = 0; i < 4; i++) {
@@ -257,7 +257,7 @@ const handleScroll = throttle((e) => {
     bottomTexts[1].style.opacity = `${100-Math.min(Math.max(150 - Math.max(scrollY/15-140, 0), 0) + 2*Math.max(scrollY/15-400, 0), 100)}%`;
     bottomTexts[2].style.opacity = `${100-Math.min(Math.max(150 - Math.max(scrollY/15-400, 0), 0) + 2*Math.max(scrollY/15-600, 0), 100)}%`;
     bottomTexts[3].style.opacity = `${100-Math.min(Math.max(150 - Math.max(scrollY/15-600, 0), 0), 100)}%`;
-}, 16); // ~60fps
+}; // ~60fps
 
 // Handle window resize for responsive updates
 window.addEventListener('resize', () => {
