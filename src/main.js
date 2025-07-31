@@ -49,6 +49,26 @@ function getResponsiveScale() {
     }
 }
 
+// iOS Safari viewport change detection
+let lastViewportHeight = window.innerHeight;
+let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+function handleViewportChange() {
+    if (isIOS) {
+        const currentHeight = window.innerHeight;
+        if (Math.abs(currentHeight - lastViewportHeight) > 50) {
+            // Significant viewport change detected
+            lastViewportHeight = currentHeight;
+            
+            // Force recalculation of responsive scaling
+            setTimeout(() => {
+                updateTextSizes();
+                handleScroll();
+            }, 100);
+        }
+    }
+}
+
 // Add images to sides with optimized sizing
 for (let i = 0; i < sides.length+subSides.length; i++) {
     if (i < 4 && i !== 2)
@@ -242,8 +262,18 @@ const handleScroll = throttle((e) => {
 // Handle window resize for responsive updates
 window.addEventListener('resize', () => {
     // Recalculate responsive scaling when window is resized
+    handleViewportChange();
     updateTextSizes();
     handleScroll();
+});
+
+// Handle iOS Safari viewport changes
+window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+        handleViewportChange();
+        updateTextSizes();
+        handleScroll();
+    }, 500);
 });
 
 // Initialize text sizes on load

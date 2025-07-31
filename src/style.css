@@ -2,11 +2,38 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+}
+
+/* iOS Safari specific fixes - allow scrolling */
+body {
+    height: 100vh;
+    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent iOS Safari from changing viewport height */
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: 100vh;
+        height: -webkit-fill-available;
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* Ensure consistent height across all iOS devices */
+@media screen and (max-width: 1024px) {
+    body {
+        height: 100vh;
+        height: -webkit-fill-available;
+        min-height: -webkit-fill-available;
+    }
 }
 
 /* Smooth transitions for all elements */
@@ -131,4 +158,16 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+/* iOS Safari specific scroll behavior */
+@media screen and (max-width: 1024px) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    body {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: none;
+    }
 }
