@@ -4,6 +4,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: cursive;
+html, body {
+    font-family: arial, sans-serif;
 }
