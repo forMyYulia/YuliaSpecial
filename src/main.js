@@ -205,9 +205,9 @@ const handleScroll = throttle((e) => {
     }
     
     // Top side animation
-    const topTranslateY = scrollY/2;
-    const topRotate = scrollY/20;
-    top.style.transform = `translateY(-${topTranslateY}px) rotate(${topRotate}deg)`;
+    const topOpacity = scrollY/2;
+    // const topRotate = scrollY/20;
+    top.style.opacity = `${100-Math.min(scrollY/10, 100)}%`;
     
     // Main sides rotation with smoother easing
     for (let i = 0; i < 4; i++) {
