@@ -68,6 +68,7 @@ for (let i = 0; i < bottomTexts.length; i++) {
 top.style.opacity = '1';
 
 window.onload = () => {
+    console.log("alo");
     setTimeout(() => {blackCurtain.style.opacity = '0'}, 350);
 }
 
